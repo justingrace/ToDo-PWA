@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/index.html"
   },
   {
-    "revision": "4849f801cd40a33ab966",
+    "revision": "47fd50d847e443243378",
     "url": "/bundle.js"
   },
   {
