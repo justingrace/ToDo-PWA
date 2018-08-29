@@ -54,7 +54,7 @@
     </noscript>
     <script type="text/javascript">
     window.isUpdateAvailable = new Promise(function(resolve, reject) {
-      if ('serviceWorker' in navigator) {
+      if ('serviceWorker' in navigator && ['localhost', '127'].indexOf(location.hostname) === -1) {
         navigator.serviceWorker.register('/dist-sw.js')
         .then(function(reg) {
           // registration worked
@@ -68,11 +68,9 @@
     						case 'installed':
     							if (navigator.serviceWorker.controller) {
     								// new update available
-                    console.log("NEW UPDATE available");
     								resolve(true);
     							} else {
     								// no update available
-                    console.log("Noooooo UPDATE available");
     								resolve(false);
     							}
     							break;
