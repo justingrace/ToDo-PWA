@@ -9,5 +9,4 @@ ToDo- Progressive web app (PWA) built with React :)
 - Add/Delete/Edit To-dos
 - Re-arrange/Drag and Drop To-dos (responsive!)
 - Toast notifications on app update
-- Modal/Popups 
-
+- Modal/Popups
