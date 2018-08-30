@@ -7,6 +7,7 @@ ToDo- Progressive web app (PWA) built with React :)
 - Fully responsive for all screen sizes (Best suited for mobile!)
 - Functional completely offline using Service Worker (I chose to use Workbox with Webpack!)
 - Add/Delete/Edit To-dos
+- Undo Deletion of To-do
 - Re-arrange/Drag and Drop To-dos (responsive!)
 - Toast notifications on app update
-- Modal/Popups
+- Modal/Popups 
