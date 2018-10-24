@@ -1,41 +1,61 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-124771938-1"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+        window.dataLayer = window.dataLayer || [];
 
-      gtag('config', 'UA-124771938-1');
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'UA-124771938-1');
     </script>
 
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8"/>
     <meta name="theme-color" content="#0095a8">
-    <link rel="shortcut icon" href="favicon.ico" />
-    <link rel="manifest" href="manifest.json">
+    <link rel="shortcut icon" href="favicon.ico"/>
+    <!--<link rel="manifest" href="manifest.json">-->
+
+    <link rel="manifest" href="manifest.webmanifest" />
+    <script async src="https://cdn.jsdelivr.net/npm/pwacompat@2.0.7/pwacompat.min.js"
+            integrity="sha384-ptgwb3/v69WGur7IwSnWOowVxE7hcRB3DG/EiHdejrw2sFNwUHynFbiRMPxc4hdS"
+            crossorigin="anonymous"></script>
+    <!-- include icon also from manifest -->
+    <link rel="icon" type="image/png" href="res/icon-128.png" sizes="128x128" />
+
     <!-- iOS icons -->
-    <link rel="apple-touch-icon" href="images/icons/icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="images/icons/icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="images/icons/icon-180x180.png">
-    <link rel="apple-touch-icon" sizes="167x167" href="images/icons/icon-167x167.png">
+    <!--<link rel="apple-touch-icon" href="images/icons/icon-57x57.png">-->
+    <!--<link rel="apple-touch-icon" sizes="152x152" href="images/icons/icon-152x152.png">-->
+    <!--<link rel="apple-touch-icon" sizes="180x180" href="images/icons/icon-180x180.png">-->
+    <!--<link rel="apple-touch-icon" sizes="167x167" href="images/icons/icon-167x167.png">-->
 
 
-    <link rel="apple-touch-startup-image" href="images/splash/splash-640x1136.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
-    <link rel="apple-touch-startup-image" href="images/splash/splash-750x1294.png" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
-    <link rel="apple-touch-startup-image" href="images/splash/splash-1242x2148.png" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
-    <link rel="apple-touch-startup-image" href="images/splash/splash-1125x2436.png" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
-    <link rel="apple-touch-startup-image" href="images/splash/splash-1536x2048.png" media="(min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)">
-    <link rel="apple-touch-startup-image" href="images/splash/splash-1668x2224.png" media="(min-device-width: 834px) and (max-device-width: 834px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)">
-    <link rel="apple-touch-startup-image" href="images/splash/splash-2048x2732.png" media="(min-device-width: 1024px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)">
+    <!--<link rel="apple-touch-startup-image" href="images/splash/splash-640x1136.png"-->
+          <!--media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">-->
+    <!--<link rel="apple-touch-startup-image" href="images/splash/splash-750x1294.png"-->
+          <!--media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">-->
+    <!--<link rel="apple-touch-startup-image" href="images/splash/splash-1242x2148.png"-->
+          <!--media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">-->
+    <!--<link rel="apple-touch-startup-image" href="images/splash/splash-1125x2436.png"-->
+          <!--media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">-->
+    <!--<link rel="apple-touch-startup-image" href="images/splash/splash-1536x2048.png"-->
+          <!--media="(min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)">-->
+    <!--<link rel="apple-touch-startup-image" href="images/splash/splash-1668x2224.png"-->
+          <!--media="(min-device-width: 834px) and (max-device-width: 834px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)">-->
+    <!--<link rel="apple-touch-startup-image" href="images/splash/splash-2048x2732.png"-->
+          <!--media="(min-device-width: 1024px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)">-->
 
-    <meta name=application-name content="ToDo App">
-    <meta name=apple-mobile-web-app-title content="ToDo App">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="msapplication-starturl" content="/">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1.0, user-scalable=no">
+    <!--<meta name=application-name content="ToDo App">-->
+    <!--<meta name=apple-mobile-web-app-title content="ToDo App">-->
+    <!--<meta name="mobile-web-app-capable" content="yes">-->
+    <!--<meta name="apple-mobile-web-app-capable" content="yes">-->
+    <!--<meta name="msapplication-starturl" content="/">-->
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1.0, user-scalable=no">
 
     <meta property=og:type content="website">
     <meta property=og:title content="ToDo App">
@@ -46,47 +66,47 @@
 
     <title>ToDo App</title>
     <meta name="description" content="A simple, elegant PWA for scheduling your hectic life.">
-    <meta name="robots" content="index, follow" />
-  </head>
-  <body>
-    <div id="root"></div>
-    <noscript>
-      You need to enable JavaScript to run this app.
-    </noscript>
-    <script type="text/javascript">
-    window.isUpdateAvailable = new Promise(function(resolve, reject) {
-      if ('serviceWorker' in navigator && ['localhost', '127'].indexOf(location.hostname) === -1) {
-        navigator.serviceWorker.register('/dist-sw.js')
-        .then(function(reg) {
-          // registration worked
-          console.log(reg);
-          reg.onupdatefound = function(){
-            var installingWorker = reg.installing;
+    <meta name="robots" content="index, follow"/>
+</head>
+<body>
+<div id="root"></div>
+<noscript>
+    You need to enable JavaScript to run this app.
+</noscript>
+<script type="text/javascript">
+    window.isUpdateAvailable = new Promise(function (resolve, reject) {
+        if ('serviceWorker' in navigator && ['localhost', '127'].indexOf(location.hostname) === -1) {
+            navigator.serviceWorker.register('/dist-sw.js')
+                .then(function (reg) {
+                    // registration worked
+                    console.log(reg);
+                    reg.onupdatefound = function () {
+                        var installingWorker = reg.installing;
 
-            console.log("Installing worker: ", installingWorker);
-            installingWorker.onstatechange = function(){
-              switch (installingWorker.state) {
-    						case 'installed':
-    							if (navigator.serviceWorker.controller) {
-    								// new update available
-    								resolve(true);
-    							} else {
-    								// no update available
-    								resolve(false);
-    							}
-    							break;
-    					}
-            }
-          }
-          console.log('Registration succeeded.');
-        }).catch(function(error) {
-          // registration failed
-          console.log('Registration failed with ' + error);
-        });
-      }
+                        console.log("Installing worker: ", installingWorker);
+                        installingWorker.onstatechange = function () {
+                            switch (installingWorker.state) {
+                                case 'installed':
+                                    if (navigator.serviceWorker.controller) {
+                                        // new update available
+                                        resolve(true);
+                                    } else {
+                                        // no update available
+                                        resolve(false);
+                                    }
+                                    break;
+                            }
+                        }
+                    }
+                    console.log('Registration succeeded.');
+                }).catch(function (error) {
+                // registration failed
+                console.log('Registration failed with ' + error);
+            });
+        }
     });
 
 
-    </script>
-  <script type="text/javascript" src="/bundle.js"></script></body>
+</script>
+<script type="text/javascript" src="/bundle.js"></script></body>
 </html>
